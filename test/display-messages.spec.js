@@ -14,7 +14,6 @@ describe('DisplayMessages', () => {
       const wrapper = shallow(
         <DisplayMessages destroy={onButtonClick} searched={fakeMessages} />
       );
-      console.log(wrapper.debug())
       expect(onButtonClick.calledOnce).to.equal(false);
       wrapper.find('button').simulate('click');
       expect(onButtonClick.calledOnce).to.equal(true);
