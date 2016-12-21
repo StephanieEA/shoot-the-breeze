@@ -12,4 +12,9 @@ describe('Application', () => {
     assert.equal(wrapper.type(), 'div');
   });
 
+  it('should not render anything if messages is empty'), () => {
+    const wrapper = shallow(<Application />)
+    
+  }
+
 });
