@@ -1,14 +1,11 @@
 import React from 'react';
-
 import { shallow, mount, render } from 'enzyme';
 import { expect, assert } from 'chai';
-
 import Count from '../lib/components/count';
 
 describe('Count', () => {
-
   it('renders as a <p>', () => {
-    const wrapper = shallow(<Count />)
+    const wrapper = shallow(<Count />);
     assert.equal(wrapper.type(), 'p');
   });
 
@@ -28,12 +25,11 @@ describe('Count', () => {
       count={draftCount}
       draft={fakeDraft}/>);
     expect(wrapper.text()).to.equal('0');
-    fakeDraft='kenia';
+    fakeDraft = 'kenia';
     draftCount = fakeDraft.length;
     wrapper = shallow(<Count
       count={draftCount}
       draft={fakeDraft}/>);
     expect(wrapper.text()).to.equal('5');
   });
-
 });

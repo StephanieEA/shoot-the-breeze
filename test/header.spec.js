@@ -1,8 +1,6 @@
 import React from 'react';
-
 import { shallow, mount, render } from 'enzyme';
 import { expect, assert } from 'chai';
-
 import Header from '../lib/components/Header';
 
 describe('Header', () => {
